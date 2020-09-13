@@ -1,0 +1,9 @@
+{
+  "name": "desafio-8",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "ibm-watson": "^5.7.0"
+  }
+}
