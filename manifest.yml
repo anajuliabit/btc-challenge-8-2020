@@ -1,12 +1,12 @@
 applications:
   - name: desafio-8-btc-ana
     path: .
-    command: node index.js
+    command: node src/index.js
     instances: 1
     routes:
       - route: btc-desafio-8-ana.mybluemix.net
     random-route: true
-    memory: 128M
+    memory: 200M
     env: 
       STT_API_KEY: fUGt9hZF7rpw4A1VipmDIv1zaJuPgbR3znaMlFhZoz2T
       STT_URL: https://api.us-south.speech-to-text.watson.cloud.ibm.com/instances/5b0b0bd0-5827-4589-824e-

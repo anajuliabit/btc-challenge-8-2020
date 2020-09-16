@@ -67,8 +67,8 @@ async function callAnalyze(analyzeParams, car) {
 
       if (betterScore) {
         if (
-          classification[betterScore][0].toUpperCase().trim() !==
-          car.toUpperCase().trim()
+          classification[betterScore][0].toUpperCase().trim().replace(/\s/g, "") !==
+          car.toUpperCase().trim().replace(/\s/g, "")
         ) {
           return {
             recomendation: classification[betterScore][0],
