@@ -31,7 +31,7 @@ function diff(num1, num2) {
 
 async function callAnalyze(analyzeParams, car) {
   const analyze = await NLU.analyze(analyzeParams);
-  if (analyze.entities && analyze.entities.length) {
+  if (analyze && analyze.entities && analyze.entities.length) {
     const entities = analyze.entities
       .filter((entitiy) => entitiy.sentiment.label === "negative")
       .map((entitiy) => {
