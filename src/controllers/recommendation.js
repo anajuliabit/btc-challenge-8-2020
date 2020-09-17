@@ -2,13 +2,13 @@ const NLU = require("../services/natural-language-understanding");
 const STT = require("../services/speech-to-text");
 
 const classification = {
-  CONSUMO: ["DUCATO", "FIORINO"],
-  SEGURANCA: ["MAREA", "DUCATO"],
-  DESEMPENHO: ["RENEGADE", "FIORINO"],
-  MANUTENCAO: ["FIORINO", "ARGO"],
-  CONFORTO: ["ARGO", "RENEGADE"],
-  DESIGN: ["FIAT 500", "TORO"],
-  ACESSORIOS: ["TORO", "FIAT 500"],
+  CONSUMO: ["ARGO", "TORO"],
+  SEGURANCA: ["DUCATO", "TORO"],
+  DESEMPENHO: ["MAREA", "TORO"],
+  MANUTENCAO: ["FIORINO", "TORO"],
+  CONFORTO: ["CRONOS", "TUCATO"],
+  DESIGN: ["CRONOS", "ARGO"],
+  ACESSORIOS: ["ARGO", "RENEGADE"],
 };
 
 const priority = [
@@ -67,8 +67,10 @@ async function callAnalyze(analyzeParams, car) {
 
       if (betterScore) {
         if (
-          classification[betterScore][0].toUpperCase().trim().replace(/\s/g, "") !==
-          car.toUpperCase().trim().replace(/\s/g, "")
+          classification[betterScore][0]
+            .toUpperCase()
+            .trim()
+            .replace(/\s/g, "") !== car.toUpperCase().trim().replace(/\s/g, "")
         ) {
           return {
             recomendation: classification[betterScore][0],
