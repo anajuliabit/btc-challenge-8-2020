@@ -6,7 +6,7 @@ const classification = {
   SEGURANCA: ["DUCATO", "TORO"],
   DESEMPENHO: ["MAREA", "TORO"],
   MANUTENCAO: ["FIORINO", "TORO"],
-  CONFORTO: ["CRONOS", "TUCATO"],
+  CONFORTO: ["CRONOS", "DUCATO"],
   DESIGN: ["CRONOS", "ARGO"],
   ACESSORIOS: ["ARGO", "RENEGADE"],
 };
