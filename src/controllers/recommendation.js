@@ -73,19 +73,19 @@ async function callAnalyze(analyzeParams, car) {
             .replace(/\s/g, "") !== car.toUpperCase().trim().replace(/\s/g, "")
         ) {
           return {
-            recomendation: classification[betterScore][0],
+            recommendation: classification[betterScore][0],
             entities,
           };
         }
         return {
-          recomendation: classification[betterScore][1],
+          recommendation: classification[betterScore][1],
           entities,
         };
       }
     }
-    return { recomendation: "", entities: [] };
+    return { recommendation: "", entities: [] };
   }
-  return { recomendation: "", entities: [] };
+  return { recommendation: "", entities: [] };
 }
 
 module.exports = {
