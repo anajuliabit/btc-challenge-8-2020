@@ -6,9 +6,9 @@ const classification = {
   SEGURANCA: ["DUCATO", "TORO"],
   DESEMPENHO: ["MAREA", "TORO"],
   MANUTENCAO: ["FIORINO", "TORO"],
-  CONFORTO: ["CRONOS", "DUCATO"],
+  CONFORTO: ["CRONOS", "TORO"],
   DESIGN: ["CRONOS", "ARGO"],
-  ACESSORIOS: ["ARGO", "RENEGADE"],
+  ACESSORIOS: ["RENEGADE", "ARGO"],
 };
 
 const priority = [
@@ -41,7 +41,7 @@ async function callAnalyze(analyzeParams, car) {
           mention: entitiy.text,
         };
       });
-
+    console.log(analyze);
     if (entities.length) {
       let sentiment = entities[0].sentiment;
       let betterScore = entities[0].entity;
