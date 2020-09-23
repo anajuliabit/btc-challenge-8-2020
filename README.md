@@ -8,3 +8,4 @@ The goal of this challenge was create a REST API whose catch input (text or audi
 - [Watson Natural Language Understanding](https://www.ibm.com/br-pt/cloud/watson-natural-language-understanding)
 - [Watson Discovery](https://www.ibm.com/cloud/watson-discovery)
 - [GCP Speech to text](https://cloud.google.com/speech-to-text?hl=pt-br)
+- [Cloud Foundry](https://www.cloudfoundry.org/)
